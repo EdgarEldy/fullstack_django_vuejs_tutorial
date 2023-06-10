@@ -1,0 +1,1 @@
+# https://github.com/EdgarEldy/fullstack_django_vuejs_tutorial.git
