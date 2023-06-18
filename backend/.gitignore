@@ -136,3 +136,6 @@ dmypy.json
 # Additional
 .vscode/
 *.code-workspace
+
+# Migrations
+migrations/
