@@ -132,3 +132,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Additional
+.vscode/
+*.code-workspace
+
+# Migrations
+migrations/
+
+# .idea files
+.idea/
