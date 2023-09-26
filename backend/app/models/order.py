@@ -7,3 +7,5 @@ from app.models import Customer, Product
 class Order(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name="customers", null=False, )
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="products", null=False, )
+    quantity = models.FloatField()
+    total = models.FloatField()
