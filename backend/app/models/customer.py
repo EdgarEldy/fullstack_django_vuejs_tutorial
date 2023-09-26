@@ -8,3 +8,9 @@ class Customer(models.Model):
     tel = models.CharField(unique=True, max_length=100, verbose_name="Telephone")
     email = models.CharField(unique=True, max_length=100, verbose_name="Email")
     address = models.CharField(max_length=100, verbose_name="Address")
+
+    class Meta:
+        db_table = 'app_customers'
+        verbose_name_plural = "customers"
+        ordering = ['id']
+        default_permissions = []
