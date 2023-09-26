@@ -9,3 +9,9 @@ class Order(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="products", null=False, )
     quantity = models.FloatField()
     total = models.FloatField()
+
+    class Meta:
+        db_table = "app_orders"
+        verbose_name_plural = "orders"
+        ordering = ["customer"]
+        default_permissions = []
