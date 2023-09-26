@@ -2,4 +2,4 @@ from django.db import models
 
 
 class Category(models.Model):
-    pass
+    category_name = models.CharField(unique=True, max_length=100)
