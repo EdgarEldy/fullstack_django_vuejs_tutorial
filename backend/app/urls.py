@@ -21,6 +21,6 @@ from app.views import categories
 
 urlpatterns = [
     # app urls goes here...
-    path('categories', categories.CategoryListView.as_view()),
+    path('categories', categories.CategoryListView.as_view()), # list, create routes
     path('categories/<int:pk>', categories.CategoryDetailView.as_view()) # GetById, Update, Delete routes
 ]
