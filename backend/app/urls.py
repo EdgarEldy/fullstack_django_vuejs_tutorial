@@ -26,5 +26,7 @@ urlpatterns = [
     path('categories/<int:pk>', categories.CategoryDetailView.as_view()),  # GetById, Update, Delete routes
 
     # products routes
-    path('products', products.ProductListView.as_view())  # list, create routes
+    path('products', products.ProductListView.as_view()),  # list, create routes
+    path('products/<int:pk>', products.ProductDetailView.as_view()),  # GetById, Update, Delete routes
+
 ]
