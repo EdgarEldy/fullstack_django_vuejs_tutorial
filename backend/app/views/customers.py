@@ -9,3 +9,9 @@ from app.serializers import CustomerSerializer
 class CustomerListView(generics.ListCreateAPIView):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
+
+
+# GetById, Update, Delete a customer
+class CustomerDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Customer.objects.all()
+    serializer_class = CustomerSerializer
