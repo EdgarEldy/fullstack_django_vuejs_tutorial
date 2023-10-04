@@ -31,5 +31,6 @@ urlpatterns = [
 
     # customers routes
     path('customers', customers.CustomerListView.as_view()),  # list, create routes
+    path('customers/<int:pk>', customers.CustomerDetailView.as_view()),  # GetById, Update, Delete routes
 
 ]
