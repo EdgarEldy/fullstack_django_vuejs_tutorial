@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from app.views import categories, products, customers
+from app.views import categories, products, customers, orders
 
 urlpatterns = [
     # app urls goes here...
@@ -32,5 +32,8 @@ urlpatterns = [
     # customers routes
     path('customers', customers.CustomerListView.as_view()),  # list, create routes
     path('customers/<int:pk>', customers.CustomerDetailView.as_view()),  # GetById, Update, Delete routes
+
+    # orders routes
+    path('orders', orders.OrderListView.as_view()),  # list, create routes
 
 ]
