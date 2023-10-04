@@ -17,13 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from app.views import categories
+from app.views import categories, products
 
 urlpatterns = [
     # app urls goes here...
     # categories routes
-    path('categories', categories.CategoryListView.as_view()), # list, create routes
-    path('categories/<int:pk>', categories.CategoryDetailView.as_view()) # GetById, Update, Delete routes
+    path('categories', categories.CategoryListView.as_view()),  # list, create routes
+    path('categories/<int:pk>', categories.CategoryDetailView.as_view()),  # GetById, Update, Delete routes
 
-
+    # products routes
+    path('products', products.ProductListView.as_view())  # list, create routes
 ]
